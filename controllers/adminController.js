@@ -46,6 +46,7 @@ class AdminController {
 
   static createProduct(req, res) {
     const { name, description, price, imageUrl, stock, CategoryId } = req.body
+
     Product.create({ name, description, price, imageUrl, stock, CategoryId })
       .then((data) => {
         res.redirect('/admin/products')
@@ -58,19 +59,72 @@ class AdminController {
         }
         res.send(err)
       })
-
   }
 
   static updateProductForm(req, res) {
+    const { id } = req.params;
+    const { errors } = req.query;
+    let errorsMessage = '';
+    let categories = null;
+    
+    if (errors) {
+      errorsMessage = errors;
+    }
 
+    Category.findAll()
+      .then((data) => {
+        categories = data;
+        return Product.findOne({
+          where: {
+            id
+          }
+        })
+      })
+      .then((product) => {
+        res.render('admin/editProduct', { title: 'Edit Product', data: categories, product, errors: errorsMessage })
+      })
+      .catch((err) => {
+        res.send(err)
+      })
   }
 
   static updateProduct(req, res) {
+    const { id } = req.params
+    const { name, description, price, imageUrl, stock, CategoryId } = req.body
 
+    Product.update({
+      name, description, price, imageUrl, stock, CategoryId
+    },
+    {
+      where: { id }
+    })
+      .then((data) => {
+        res.redirect('/admin/products')
+      })
+      .catch((err) => {
+        if (err.name === "SequelizeValidationError") {
+          const errors = err.errors.map(error => error.message);
+          res.redirect(`/admin/products/${id}/edit?errors=${errors}`)
+          return;
+        }
+        res.send(err)
+      })
   }
 
   static deleteProduct(req, res) {
-
+    const { id } = req.params
+    
+    Product.destroy({
+      where: {
+        id
+      }
+    })
+      .then((data) => {
+        res.redirect('/admin/products')
+      })
+      .catch((err) => {
+        res.send(err)
+      })
   }
 }
 
