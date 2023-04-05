@@ -61,5 +61,20 @@
     </div>
   </section>
   <!-- Products Card -->
-</section>
 
+    <!-- Category (Saya Pake "Products" Dulu karena "Categories" belum ada) -->
+    <section class="category">
+      <div class="container py-5">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <h5 class="text-center pb-5">Select Products by Category</h5>
+            <div class="col mx-auto">
+              <% for (const data of products) {%>
+              <a class="btn px-5 py-3 rounded-pill btn-outline-secondary" href="/products/<%= data.id %>/category" role="button"><%= data.name %></a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Category  -->
