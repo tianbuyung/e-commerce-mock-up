@@ -18,6 +18,16 @@ module.exports = (sequelize, DataTypes) => {
     priceToIdr() {
       return formatterIntoIdr(this.price)
     }
+
+    static homeNotification() {
+      const result = Product.findOne({
+        attributes: [
+          [sequelize.fn('COUNT', sequelize.col('id')), 'productCount'],
+        ]
+      })
+      
+      return result;
+    }
   }
   Product.init({
     name: {

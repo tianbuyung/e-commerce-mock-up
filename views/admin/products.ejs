@@ -18,6 +18,13 @@
           <h1 class="h2">Product List</h1>
         </div>
 
+        <% if (notification?.dataValues?.productCount !== '0') { %>
+          <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+            The number of products to date is <%= notification?.dataValues?.productCount %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% } %>
+
         <div class="table-responsive">
           <table class="table table-striped table-sm">
             <thead>

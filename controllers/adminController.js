@@ -4,8 +4,8 @@ const { Product, Category } = require('../models');
 class AdminController {
   static readProducts(req, res) {
     const { search } = req.query;
-
     let options = {}
+    let productData = null;
 
     if (search) {
       options = {
@@ -20,7 +20,11 @@ class AdminController {
       include: Category
     })
       .then((data) => {
-        res.render('admin/products', { title: "Dashboard", data })
+        productData = data
+        return Product.homeNotification();
+      })
+      .then((notification) => {
+        res.render('admin/products', { title: "Dashboard", data: productData, notification })
       })
       .catch((err) => {
         res.send(err)
