@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Bacardi Breezer - Strawberry",
+    "description": "Retinal vasculitis, bilateral",
+    "price": "$36.10",
+    "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIJSURBVDjLjZNPSNNhGMc/7+/3Ww5LmRaho0AdQgWpbRUqHmohVIdBp6Cbp7DWpQi8VyRBt+jQpdNuHYLAWEEiORl0CCsbIlGH5YKFbXPE/rzv+3QYipIOH3h5eB94Pu/3ff4gIuzl5EZGZKe4wx7t1cTEjnElIpuXTCYjxhi01mx4rTX5fJ5UKkUwGCQUChGLxdRGjreVVq/X6evrA2ArWESIRqOICMlkcpuCbQCtNQCzy42fGQFjwYrFGLh4QlOtVncH1Go1RIRw158dCwmBvQHS2Q6sWLRtKNAGrBWuDGkqlUpzAMCZ7t+7tLOjuYJqtYqIMPejEyOCtmBNoxZihaun680VFE0BEWHsaP6/1z98m2P6xTyl1gLXHpwvFcprj2YeLt7fBNxNT/bsC/i5JJex1pJIJHAcB6UU6y05Wnv+cm7sLEc6+5ldetmW/vL+3nA8GNicRGttr+NzyRQ/IyJ4nkc4HCYSiZDTKwwdG8Q4hsHucYyqM3xyFOCmA3A7db0do94d9B3ibfY11lo8z8PzPBzHYa2cx6cOEDt+C4A7F54ROjwA4PcAjDaTRltZKS+r/bV2ktkZrM/iui5KKQqlNZZWF1hcnWdq/DnTbybwuy0AFSUixONxabZIP/mK25tjdGCM/q5TrPz6yMKnebLfi4+3LVMzG44Hp4EbQBuwDjxNP1md+gdPcFmX7csAmAAAAABJRU5ErkJggg==",
+    "stock": 99,
+    "CategoryId": 1,
+    "UserId": 2
+  },
+  {
+    "id": 2,
+    "name": "Sunflower Seed Raw",
+    "description": "Pathological fracture, right foot, subs for fx w nonunion",
+    "price": "$4.03",
+    "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKvSURBVBgZBcG7ixx1AADg77czu5vL7Su3d5fEmHBBElBBEkvBVyqNdgYrwdbKRsm/YG8lFgoiNpYWChJBI4IPTAKSByQm5p17aOZ2ZnZ2Z2bH7wunz7x+brw+PhVFEQAIAACCAAio6oXtze0f4vH6+NRnH38utIJqUQIgCBqNAPIyRdA0Lc2i0ah9ePaDU3EURWqVUH4l+/6CfedyW2ePWO73XLv2iyvZp+5vJfr9gUc7iShu280K755utONICyBJdiRPd+ymqfy7y9L0gTRNhdkFs+nENJ+YT1PTaaoqMiEsEMQBMByu0ZT2vr/CR3/qvrVq/eATlsobptUx/VFfJ2qJ2x1pXghhhqAFBEmSSNOJx+u13X2V6dfXqRea/LxylsonmXKWmxWZ+SwXQgNigOFwnaY0Gg4k7z1j3yc7qpcP6q7OHJnvaPcO29uNtDttk3yOXQIxARTFTJbmQmhMlmvRcaZf/O2nk6dNm4Xi/lWdOBZVie7SqiBGEAfA0tJIb5AZDgag/c6G8192LK++5IWn9mt3YpvJ3KPtxKNbP4paJwTEATBJMmk6Q+aPew/dLluqw297ZWPN43lLVdSaENl4ctXtf44KWS6gJQQBg9EB9oxczCu35m2j0ZqiXOh2O6p6YbFoFPOFsg6aqKtpd0AMTdP49c5NF+5d1ev1FUUhTTPdKChmpbIOqkUDmkAxLTSdMYgD8iqzVZe6nZ7lpaFiNtfb05MlFz3cPGg0HitF4lbw4N9SnN1x9/fLICYIoaVvYBpy3XrJ3tCz/8qm0cO/XL9BdfM5ragjn5VayR0vHvjP1qWf7ckm4qqq1XXt0MoJh8YEEIRjeJWjIYCVycJm1HL30o7ta785cvx5z979RnjzzBvfrq2vvha1YwQBEAAAEACd/IGTK7WimPkf4mk8xSgTQvcAAAAASUVORK5CYII=",
+    "stock": 89,
+    "CategoryId": 2,
+    "UserId": 3
+  },
+  {
+    "id": 3,
+    "name": "Apricots Fresh",
+    "description": "Unsp inj flexor musc/fasc/tend l little finger at wrs/hnd lv",
+    "price": "$10.04",
+    "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAIJSURBVDjLpVM9aJNRFD35GsRSoUKKzQ/B0NJJF3EQlKrVgijSCBmC4NBFKihIcXBwEZdSHVoUwUInFUEkQ1DQ4CKiFsQsTrb5xNpgaZHw2Uog5t5zn0NJNFaw0guX97hwzuPcc17IOYfNlIdNVrhxufR6xJkZjAbSQGXjNAorqixSWFDV3KPhJ+UGLtSQMPryrDscPwLnAHOEOQc6gkbUpIagGmApWIb/pZRX4fjj889nWiSQtgYyBZ1BTUEj6AjPa0P71nb0Jfqwa+futIheHrzRn2yRQCUK/lOQhApBJVQJChHfnkCqOwWEQ+iORJHckUyX5ksvAEyGNuJC+s6xCRXNHNxzKMmQ4luwgjfvZp69uvr2+IZcyJ8rjIporrxURggetnV0QET3rrPxzMNM2+n7p678jUTrCiWhphAjVHR9DlR0WkSzf4IHxg5MSF0zXZEuVKWKSlCBCostS8zeG7oV64wPqxInbw86lbVXKEQ8mkAqmUJ4SxieeVhcnANFC02C7N2h69HO2IXeWC8MDj2JnqaFNAMd8f3HKjx6+LxQRmnOz1OZaxKIaF1VISYwB9ARZoQaYY6o1WpYCVYxt+zDn/XzVBv/MOWXW5J44ubRyVgkelFpmF/4BJVfOVDlVyqLVBZI5manPjajDOdcswfG9k/3X9v3/vfZv7rFBanriIo++J/f+BMT+YWS6hXl7QAAAABJRU5ErkJggg==",
+    "stock": 49,
+    "CategoryId": 5,
+    "UserId": 2
+  },
+  {
+    "id": 4,
+    "name": "Vodka - Moskovskaya",
+    "description": "Unspecified injury of lower back",
+    "price": "$90.57",
+    "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJPSURBVDjLpZPta1JhGMaFPvZ/CH3rL1BqICLzg0EMKmSwmZXWskPhSwQJ2yQzVEYyaRI1ikkOCqISJDU/9IZRKyqn9SWYuBedb+d4ju7quZ/jBvvYuuGC+1z3dX7nOc9zjgaA5n+ksbiWHKGnlbbvcRneR0yLJXge/MC1+99wNfEVwsIXXIl/wuX5IqbufoBz7h288UKb7uOA6SeVQfRVFf+qqXBuwAH05IPobDALDvAuruIgNTGbUQGehz+50VP6kJjEnoK2qKApymh0ethsiajVu1hb7+BPrYVfa02eH59ODwFsw6jkwQByv89BXVlBR1JB210FW20J600GaoiobnR53nrzhQqg3abqM4BCEKYeA4kM1KHVMFCLVtRRUG/J2GhKPH/mxnMVQEfFATs7HLAL6jFJffWVdkHNIYjq1PVnKkC493kPQGp3u3iZTiMUCiGRSCAYDGK1XEZtcwu3hx7NxoUwdDrdYc1U7KMKYJJkGQssEIlEUK1WUalUkMvl+PV8PI5SqcS9QqHAvdHR0VuaS3Pv947mdTYLn8+H4soKZgMBmM1m2Gw2RKNReDwe3pMXYDOCCILQ0Dijb/cA4XAYMzMzHCBJEoxGIzKZDIrFIvL5PFKpFPdoRgC/3y/Sv7B07s4b/mWZJ/ywn3dywEnrRRw7PgKDwQCLxcJFPXknTl/gALvdXt/3Zx1hxZb4nW1SPZlMbi4vLyMWi8HlcsHtdvOePJpRhrL7AFqt9pBerz9qMpl+T05Oth0Oh8jUGxsbszKNsL5JHs0oQ9m/1aYTg/t8sGkAAAAASUVORK5CYII=",
+    "stock": 16,
+    "CategoryId": 1,
+    "UserId": 3
+  },
+  {
+    "id": 5,
+    "name": "Filo Dough",
+    "description": "Partial traumatic amputation of one left lesser toe, sequela",
+    "price": "$6.98",
+    "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAElSURBVCjPfZFNSwJBHMb9UPOd5pR9hUnvIQrFQl26FHXo0CmImEMoQUhl48vBw5qWtY461pKU9PTsrJRsFM9l2N/v/7IzOeT+z/ehI9qqpZvW2Ia+VdciI3Rk20SIsWBeMUTdXMkVgdjNAcwxg8MbTzEuXU0uBTY3CZ5gDMuMEHlFm3PhhZaKMviJAbo4UV5o6phtE7jO5FEkHnKTMY60F+7sAlPiiDDvhUc8UHrHvvVCg8KE+NnjNRQwYJIee6lwo2dcKZlbJCxgg7jP/wmxm46oqz4+WZE0Hnh4jx4+UEWQLlkTF2bKrX9gyIIeAhOI5UWdyVM34scX38exOkTgKnLlqo/loalzRMzZXWhUTElmHutA7KhtvWXLtqQ3VVn8es2/8gUo3nl2LXz6SAAAAABJRU5ErkJggg==",
+    "stock": 41,
+    "CategoryId": 5,
+    "UserId": 1
+  }
+]

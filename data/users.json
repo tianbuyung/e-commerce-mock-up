@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "username": "jwagstaffe0",
+    "email": "ibeckhurst0@cdc.gov",
+    "password": "kWMDuDmzAm",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "dlopes1",
+    "email": "vrapaport1@jimdo.com",
+    "password": "c7TYXgT",
+    "role": "admin"
+  },
+  {
+    "id": 3,
+    "username": "cleprovest2",
+    "email": "adaborne2@tinypic.com",
+    "password": "DdPBjfq8uVU",
+    "role": "admin"
+  },
+  {
+    "id": 4,
+    "username": "kherreros3",
+    "email": "ewickliffe3@odnoklassniki.ru",
+    "password": "I3YAeA5cG",
+    "role": "admin"
+  },
+  {
+    "id": 5,
+    "username": "agronauer4",
+    "email": "kjeandin4@hibu.com",
+    "password": "ZPtZBGd",
+    "role": "admin"
+  }
+]
