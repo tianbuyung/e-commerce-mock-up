@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const formatterIntoIdr = require('../helpers/formatterIntoIdr');
 module.exports = (sequelize, DataTypes) => {
   class Product extends Model {
     /**
@@ -12,6 +13,10 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Product.belongsTo(models.Category, { foreignKey: 'CategoryId' });
+    }
+
+    priceToIdr() {
+      return formatterIntoIdr(this.price)
     }
   }
   Product.init({
