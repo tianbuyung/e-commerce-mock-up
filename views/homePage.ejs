@@ -7,7 +7,6 @@
     <title>LANDING PAGE</title>
  </head>
 <body>
-    
     <%- include(`./navbar`, {isLogin, isAdmin}) %></br>
     <h1></h1></br>
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -33,3 +32,34 @@
     </div>
   </body>
 </html>
+
+  <!-- Products Card, FOTO NYA BELUM MUNCUL YANG DILANDING PAGE -->
+  <section id="productsCard">
+    <div class="container-fluid py-5">
+      <div class="container">
+        <div class="row">
+          <% for (const key of products) {%>
+          <!-- card 1 -->
+          <div class="mb-3 col-md-3 col-6">
+            <div class="card h-100 rounded-2 shadow-sm poductsCard">
+              <div class="col">
+                <div class="inner">
+                  <img src="<%= key.imageUrl %>" class="card-img-top img-fluid" alt="paket 1" style="width: auto; height: auto" />
+                </div>
+              </div>
+              <div class="card-body">
+                <p class="card-title fw-bold" style="font-size: 12px"><%= key.name %></p>
+                <p class="card-text" style="font-size: 12px">Stock : <%= key.stock %></p>
+                <p class="card-text" style="font-size: 12px"><%= formatPriceToEjs(key.price) %></p>
+                <a href="/products/<%= key.id %>/detail" style="text-decoration: none; color: #1ac0e4; font-size: 14px">Show detail</a>
+              </div>
+            </div>
+          </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Products Card -->
+</section>
+
