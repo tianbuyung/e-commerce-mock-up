@@ -7,7 +7,7 @@ class HomeController {
 
     Product.findAll()
       .then((products) => {
-        productData = products
+        productData = products.slice(0,4)
         return Category.findAll()
       })
       .then((categories) => {

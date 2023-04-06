@@ -6,8 +6,12 @@ class AuthController {
 
   static registerForm(request, response) {
     const { role } = request.session
-    const errors = request.query.errors
-    response.render("register", { role, errors });
+    if (role) {
+      response.redirect('/')
+    } else {
+      const errors = request.query.errors
+      response.render("register", { role, errors });
+    }
   }
 
   static submitRegister(request, response) {
@@ -29,7 +33,11 @@ class AuthController {
   static loginForm(request, response) {
     const { role } = request.session
     const { error } = request.query;
-    response.render("loginForm", { error, role });
+    if (role) {
+      response.redirect('/')
+    } else {
+      response.render("loginForm", { error, role });
+    }
   }
   
   static submitLoginUser(request, response) {

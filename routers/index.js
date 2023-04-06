@@ -15,7 +15,5 @@ router.use('/products', isLoginMiddleWare, productRouter);
 router.use('/profile', isLoginMiddleWare, profileRouter);
 router.use('/admin', isAdminMiddleware, adminRouter); // done
 router.use('/categories', categoryRouter);
-// router.use(isLoginMiddleWare);
-// router.use(isAdminMiddleware);
 
 module.exports = router;

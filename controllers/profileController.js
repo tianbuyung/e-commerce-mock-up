@@ -1,18 +1,17 @@
-const { User, Product, Category, Profile } = require("../models");
-const { Op, where } = require("sequelize");
-const bcrypt = require("bcryptjs");
+const { User, Profile } = require("../models");
 
 class UserController {
     static profile(request, response) {
         let id = request.session.userId;
         console.log(id);
-        User.findAll({
-            include: [Profile],
+        const { role } = request.session
+        User.findOne({
             where: { id },
+            include: Profile,
         })
-            .then((res) => {
-                let user = res[0];
-                response.render("profile", { user, isLogin: request.session.userId ? true : false, isAdmin: request.session.userId && request.session.role === "admin" ? true : false });
+            .then((data) => {
+                console.log(data)
+                response.render("profile", { user: data, role });
                 // response.send(res[0]);
             })
             .catch((err) => {
@@ -27,7 +26,7 @@ class UserController {
         })
             .then((res) => {
                 let user = res[0];
-                response.render("addProfile", { user, isLogin: request.session.userId ? true : false, isAdmin: request.session.userId && request.session.role === "admin" ? true : false });
+                response.render("addProfile", { user });
             })
             .catch((err) => {
                 response.send(err);
@@ -53,7 +52,7 @@ class UserController {
             .then((res) => {
                 // console.log(res);
                 let account = res[0];
-                response.render("editProfile", { account, isLogin: request.session.userId ? true : false, isAdmin: request.session.userId && request.session.role === "admin" ? true : false });
+                response.render("editProfile", { account });
             })
             .catch((err) => {
                 response.send(err);
