@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   session({
-    secret: "keyboard cat",
+    secret: "avada kedavra",
     resave: false,
     saveUninitialized: false,
     cookie: {

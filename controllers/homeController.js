@@ -5,6 +5,7 @@ const bcrypt = require("bcryptjs");
 class HomeController {
   static homePage(request, response) {
     let { name } = request.query;
+    console.log(request.session);
 
     Product.findAll({
       where: name ? { name: { [Op.like]: `%${name}%` } } : {},
