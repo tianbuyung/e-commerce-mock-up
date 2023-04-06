@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Product, Category } = require('../models');
+const sendEmail = require('../helpers/sendEmail');
 
 class AdminController {
   static readProducts(req, res) {
@@ -129,6 +130,21 @@ class AdminController {
       .catch((err) => {
         res.send(err)
       })
+  }
+
+  static sendEmailForm(req, res) {
+    res.render('admin/sendEmail', { title: 'Send Email' })
+  }
+
+  static sendEmail(req, res) {
+    const { sendTo, subjectEmail, bodyEmail } = req.body;
+
+    sendEmail(sendTo, subjectEmail, bodyEmail)
+      .then((data) => {
+        console.log(data)
+        res.redirect('/admin/products/email')
+      })
+      .catch(console.error);
   }
 }
 

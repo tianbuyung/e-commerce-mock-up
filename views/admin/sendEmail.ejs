@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head.ejs') %>
+    <script src="https://cdn.tiny.cloud/1/ndv6ggp9jlriwsp6pivicq20in3otnnhit0oc5kg99mwq960/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: 'textarea#default-editor'
+      });
+    </script>
+</head>
+
+<body>
+  <%- include('./partials/themeSystems.ejs') %>
+
+  <%- include('./partials/navbar.ejs') %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <%- include('./partials/sidebar.ejs') %>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">TinyMCE Quick Start Guide</h1>
+        </div>
+
+        <form action="/admin/products/email" method="post">
+          <div class="mb-3">
+            <label for="sendTo" class="form-label">Send To</label>
+            <textarea class="form-control" id="sendTo" rows="1" name="sendTo"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="subjectEmail" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="subjectEmail" placeholder="Subject" name="subjectEmail">
+          </div>
+          <div class="mb-3">
+            <textarea id="default-editor" name="bodyEmail">Hello, World!</textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Send Email</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+      
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
