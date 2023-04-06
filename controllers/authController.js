@@ -1,4 +1,4 @@
-const { User } = require("../models");
+const { User, Profile } = require("../models");
 const bcrypt = require("bcryptjs");
 
 class AuthController {
@@ -18,6 +18,7 @@ class AuthController {
     let { username, email, password, role } = request.body;
     User.create({ username, email, password, role })
       .then((res) => {
+        Profile.create({ UserId: res.id })
         response.redirect("/login");
       })
       .catch((err) => {
