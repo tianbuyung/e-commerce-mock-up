@@ -4,8 +4,8 @@ const { USERNAME, PASSWORD } = process.env;
 
 module.exports = {
   development: {
-    username: 'postgres',
-    password: 'postgres',
+    username: USERNAME || 'postgres',
+    password: PASSWORD || 'postgres',
     database: "eCommerceDB",
     host: "127.0.0.1",
     dialect: "postgres",
