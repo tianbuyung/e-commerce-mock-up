@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<%- include('./partials/head.ejs') %>
+</head>
+
+<body>
+  <%- include('./partials/themeSystems.ejs') %>
+
+  <%- include('./partials/navbar.ejs') %>
+
+  <div class="container-fluid">
+    <div class="row">
+      <%- include('./partials/sidebar.ejs') %>
+
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <h1 class="h2">Edit Product</h1>
+        </div>
+
+        <% if (errors) { %>
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <% errors.split(",").forEach(error => { %>
+              <p class="text-center"><%= error %></p>
+            <% }) %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% } %>
+
+        <div>
+          <form action="/admin/products/<%= product.id %>/edit" method="post">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name of Product</label>
+              <input type="text" class="form-control" id="name" placeholder="Name of Product" name="name" value="<%= product.name %>">
+            </div>
+            <div class="mb-3">
+              <label for="description" class="form-label">Description</label>
+              <textarea class="form-control" id="description" rows="3" name="description">value="<%= product.description %>"</textarea>
+            </div>
+            <div class="mb-3">
+              <label for="price" class="form-label">Price</label>
+              <input type="number" class="form-control" id="price" placeholder="Price" name="price" value="<%= product.price %>">
+            </div>
+            <div class="mb-3">
+              <label for="imageUrl" class="form-label">Image Url</label>
+              <input type="text" class="form-control" id="imageUrl" placeholder="Image Url" name="imageUrl" value="<%= product.imageUrl %>">
+            </div>
+            <div class="mb-3">
+              <label for="stock" class="form-label">Stock</label>
+              <input type="number" class="form-control" id="stock" placeholder="Stock" name="stock" value="<%= product.stock %>">
+            </div>
+            <div class="mb-3">
+              <label for="category" class="form-label">Category</label>
+              <select id="category" class="form-select" name="CategoryId">
+                <option selected disabled value="">Choose...</option>
+                <% data.forEach((category) => { %>
+                  <option value="<%= category.id %>" <%= product.CategoryId === category.id ? 'selected' : '' %>><%= category.name %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary">Edit Product</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>
