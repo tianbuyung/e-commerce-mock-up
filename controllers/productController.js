@@ -31,6 +31,21 @@ class ProductController {
         res.send(err)
       })
   }
+
+  static readProductDetail(req, res) {
+    const { id } = req.params;
+    const { role } = req.session
+
+    Product.findOne({
+      where: { id }
+    })
+      .then((product) => {
+        res.render('seeDetail', { title: "Form Detail", product, role })
+      })
+      .catch((err) => {
+        res.send(err)
+      })
+  }
 }
 
 module.exports = ProductController;
