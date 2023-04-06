@@ -1,12 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Controllers = require('../controllers/productController');
-const isLoginMiddleWare = require("../middleware/loginMiddleware");
-const isAdminMiddleware = require("../middleware/isAdminMiddleware");
+const ProductController = require('../controllers/productController');
 
-router.get('/', );
+router.get('/', ProductController.readProducts);
 router.get('/:id', );
-router.use(isLoginMiddleWare);
-router.use(isAdminMiddleware);
 
 module.exports = router;

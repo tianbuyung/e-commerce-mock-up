@@ -51,8 +51,9 @@ class AdminController {
 
   static createProduct(req, res) {
     const { name, description, price, imageUrl, stock, CategoryId } = req.body
+    const { userId } = req.session;
 
-    Product.create({ name, description, price, imageUrl, stock, CategoryId })
+    Product.create({ name, description, price, imageUrl, stock, CategoryId, UserId: userId })
       .then((data) => {
         res.redirect('/admin/products')
       })
