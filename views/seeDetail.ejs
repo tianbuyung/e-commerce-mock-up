@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./head', {title: "Form Detail"}) %>
+<body>
+    <%- include('./navbar') %>
+    <div class="container detail p-3">
+        <% for (const key of products) {%>
+        <img class="img-fluid img-thumbnail" src="<%= key.imageUrl %>" alt="<%= key.name %>">
+        <div class="container-fluid pt-3">
+            <h2>Detail Information</h2>
+                    <label for="description">Description</label>
+                    <title class="form-control" rows="5" id="description" name="description"><%=key.description %></title>
+                </div>
+            </form>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>
